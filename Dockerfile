@@ -10,7 +10,7 @@ ENV APACHE_RUN_USER=www-data \
  LANG=C
 
 RUN apt-get -qq update && \
-apt-get install -yq wget ca-certificates libapache2-mod-php php-ldap && \
+apt-get install -yq wget ca-certificates libapache2-mod-php php-ldap php-mbstring && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 mkdir -p /var/run/apache2$SUFFIX/ /var/lock/apache2$SUFFIX /var/log/apache2$SUFFIX && \
 echo "[Success]"
